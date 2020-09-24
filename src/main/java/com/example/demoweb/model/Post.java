@@ -4,10 +4,10 @@ import java.util.Date;
 
 public class Post {
     private String text;
-    private Integer likes;
+    private int likes;
     private Date creationDate;
 
-    public Integer getLikes() {
+    public int getLikes() {
         return likes;
     }
 
