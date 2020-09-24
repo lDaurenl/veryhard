@@ -10,13 +10,20 @@ import java.util.List;
 
 @Service
 public class PostService {
+    private List<Post> posts;
+
+    public PostService(){
+        this.posts= new ArrayList<>();
+
+        this.posts.add(new Post("я есть текст0", new Date()));
+        this.posts.add(new Post("я есть текст1", new Date()));
+        this.posts.add(new Post("я есть текст2", new Date()));
+    }
     public List<Post> listAllPosts(){
-        List<Post> posts= new ArrayList<>();
-
-        posts.add(new Post("я есть текст0", new Date()));
-        posts.add(new Post("я есть текст1", new Date()));
-        posts.add(new Post("я есть текст2", new Date()));
-
         return posts;
+    }
+
+    public void create(String text) {
+        posts.add(new Post(text, new Date()));
     }
 }
